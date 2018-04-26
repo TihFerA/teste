@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container mt-5">
+    <table id="products" class="table table-hover"></table>
+    <a href="@Url.Action("Create", "Home")" class="btn btn-outline-primary" role="button"> Novo</a>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            var t = $('#products').DataTable({
+                "paging": false,
+                "ordering": false,
+                "searching": false,
+                "info": false,
+                "columns": [
+                    {
+                        "data": "Id",
+                        "title": "#"
+                    },
+                    {
+                        "data": "Codigo",
+                        "title": "Código"
+                    },
+                    {
+                        "data": "Descricao",
+                        "title": "Descrição"
+                    },
+                    {
+                        "data": "Preco",
+                        "title": "Preço"
+                    }
+                ]
+            });
+
+            o('http://localhost:57578/Products').get(function (dataSet) {
+                dataSet.forEach(function (s) {
+                    t.row.add(s).draw(false);
+                })
+            }, function (status) {
+                console.error(status); // error with status
+            });
+        });
+    </script>
+}
