@@ -30,6 +30,6 @@ namespace ExercicioFinal.FrontEnd2.Controllers
             {
                 return View();
             }
-        }        
+        }
     }
 }

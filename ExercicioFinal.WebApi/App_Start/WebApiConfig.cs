@@ -1,9 +1,8 @@
 ﻿using ExercicioFinal.WebApi.Models;
 using Staff.Framework.Web.Helpers;
-using System.Net.Http.Headers;
 using System.Web.Http;
-using System.Web.OData.Builder;
-using System.Web.OData.Extensions;
+using Microsoft.AspNet.OData.Builder;
+using Microsoft.AspNet.OData.Extensions;
 
 namespace ExercicioFinal.WebApi
 {
