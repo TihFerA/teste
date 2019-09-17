@@ -14,7 +14,7 @@
  * ©2008-2017 SpryMedia Ltd - datatables.net/license
  */
 
-/**
+/*
  * @summary     DataTables
  * @description Paginate, search and order HTML tables
  * @version     1.10.16
@@ -71,7 +71,7 @@
 (function( $, window, document, undefined ) {
 	"use strict";
 
-	/**
+	/*
 	 * DataTables is a plug-in for the jQuery Javascript library. It is a highly
 	 * flexible tool, based upon the foundations of progressive enhancement,
 	 * which will add advanced interaction controls to any HTML table. For a
@@ -105,7 +105,7 @@
 	 */
 	var DataTable = function ( options )
 	{
-		/**
+		/*
 		 * Perform a jQuery selector action on the table's TR elements (from the tbody) and
 		 * return the resulting jQuery object.
 		 *  @param {string|node|jQuery} sSelector jQuery selector or node collection to act on
@@ -147,7 +147,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Almost identical to $ in operation, but in this case returns the data for the matched
 		 * rows - as such, the jQuery selector used should match TR row nodes or TD/TH cell nodes
 		 * rather than any descendants, so the data can be obtained for the row/cell. If matching
@@ -201,7 +201,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Create a DataTables Api instance, with the currently selected tables for
 		 * the Api's context.
 		 * @param {boolean} [traditional=false] Set the API instance's context to be
@@ -220,7 +220,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Add a single new row or multiple rows of data to the table. Please note
 		 * that this is suitable for client-side processing only - if you are using
 		 * server-side processing (i.e. "bServerSide": true), then to add data, you
@@ -275,7 +275,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * This function will make DataTables recalculate the column sizes, based on the data
 		 * contained in the table and the sizes applied to the columns (in the DOM, CSS or
 		 * through the sWidth parameter). This can be useful when the width of the table's
@@ -312,7 +312,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Quickly and simply clear a table
 		 *  @param {bool} [bRedraw=true] redraw the table or not
 		 *  @dtopt API
@@ -336,7 +336,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * The exact opposite of 'opening' a row, this function will close any rows which
 		 * are currently 'open'.
 		 *  @param {node} nTr the table row to 'close'
@@ -366,7 +366,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Remove a row for the table
 		 *  @param {mixed} target The index of the row from aoData to be deleted, or
 		 *    the TR element you want to delete
@@ -405,7 +405,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Restore the table to it's original state in the DOM by removing all of DataTables
 		 * enhancements, alterations to the DOM structure of the table and event listeners.
 		 *  @param {boolean} [remove=false] Completely remove the table from the DOM
@@ -425,7 +425,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Redraw the table
 		 *  @param {bool} [complete=true] Re-filter and resort (if enabled) the table before the draw.
 		 *  @dtopt API
@@ -447,7 +447,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Filter the input based on data
 		 *  @param {string} sInput String to filter the table on
 		 *  @param {int|null} [iColumn] Column to limit filtering to
@@ -481,7 +481,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Get the data for the whole table, an individual row or an individual cell based on the
 		 * provided parameters.
 		 *  @param {int|node} [src] A TR row node, TD/TH cell node or an integer. If given as
@@ -534,7 +534,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Get an array of the TR nodes that are used in the table's body. Note that you will
 		 * typically want to use the '$' API method in preference to this as it is more
 		 * flexible.
@@ -562,7 +562,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Get the array indexes of a particular cell from it's DOM element
 		 * and column index including hidden columns
 		 *  @param {node} node this can either be a TR, TD or TH in the table's body
@@ -611,7 +611,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Check to see if a row is 'open' or not.
 		 *  @param {node} nTr the table row to check
 		 *  @returns {boolean} true if the row is currently open, false otherwise
@@ -640,7 +640,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * This function will place a new row directly after a row which is currently
 		 * on display on the page, with the HTML contents that is passed into the
 		 * function. This can be used, for example, to ask for confirmation that a
@@ -680,7 +680,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Change the pagination - provides the internal logic for pagination in a simple API
 		 * function. With this function you can have a DataTables table go to the next,
 		 * previous, first or last pages.
@@ -706,7 +706,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Show a particular column
 		 *  @param {int} iCol The column whose display should be changed
 		 *  @param {bool} bShow Show (true) or hide (false) the column
@@ -732,7 +732,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Get the settings for a particular table for external manipulation
 		 *  @returns {object} DataTables settings object. See
 		 *    {@link DataTable.models.oSettings}
@@ -754,7 +754,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Sort the table by a particular column
 		 *  @param {int} iCol the data index to sort on. Note that this will not match the
 		 *    'display index' if you have hidden data entries
@@ -775,7 +775,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Attach a sort listener to an element for a given column
 		 *  @param {node} nNode the element to attach the sort listener to
 		 *  @param {int} iColumn the column that a click on this node will sort on
@@ -797,7 +797,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Update a table cell or row - this method will accept either a single value to
 		 * update the cell with, an array of values with one element for each column or
 		 * an object in the same format as the original data source. The function is
@@ -841,7 +841,7 @@
 		};
 		
 		
-		/**
+		/*
 		 * Provide a common method for plug-ins to check the version of DataTables being used, in order
 		 * to ensure compatibility.
 		 *  @param {string} sVersion Version string to check for, in the format "X.Y.Z". Note that the
@@ -1527,7 +1527,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Determine if all values in the array are unique. This means we can short
 	 * cut the _unique method at the cost of a single loop. A sorted array is used
 	 * to easily check the values.
@@ -1556,7 +1556,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Find the unique elements in a source array.
 	 *
 	 * @param  {array} src Source array
@@ -1596,7 +1596,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * DataTables utility methods
 	 * 
 	 * This namespace provides helper methods that DataTables uses internally to
@@ -1607,7 +1607,7 @@
 	 *  @namespace
 	 */
 	DataTable.util = {
-		/**
+		/*
 		 * Throttle the calls to a function. Arguments and context are maintained
 		 * for the throttled function.
 		 *
@@ -1643,7 +1643,7 @@
 		},
 	
 	
-		/**
+		/*
 		 * Escape a string such that it can be used in a regular expression
 		 *
 		 *  @param {string} val string to escape
@@ -1656,7 +1656,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Create a mapping object that allows camel case parameters to be looked up
 	 * for their Hungarian counterparts. The mapping is stored in a private
 	 * parameter called `_hungarianMap` which can be accessed on the source object.
@@ -1690,7 +1690,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Convert from camel case parameters to Hungarian, based on a Hungarian map
 	 * created by _fnHungarianMap.
 	 *  @param {object} src The model object which holds all parameters that can be
@@ -1733,7 +1733,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Language compatibility - when certain options are given, and others aren't, we
 	 * need to duplicate the values over, in order to provide backwards compatibility
 	 * with older language files.
@@ -1773,7 +1773,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Map one parameter onto another
 	 *  @param {object} o Object to map
 	 *  @param {*} knew The new parameter name
@@ -1786,7 +1786,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Provide backwards compatibility for the main DT options. Note that the new
 	 * options are mapped onto the old parameters, so this is an external interface
 	 * change only.
@@ -1827,7 +1827,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Provide backwards compatibility for column options. Note that the new options
 	 * are mapped onto the old parameters, so this is an external interface change
 	 * only.
@@ -1848,7 +1848,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Browser feature detection for capabilities, quirks
 	 *  @param {object} settings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -1927,7 +1927,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Array.prototype reduce[Right] method, used for browsers which don't support
 	 * JS 1.6. Done this way to reduce code size, since we iterate either way
 	 *  @param {object} settings dataTables settings object
@@ -1961,7 +1961,7 @@
 		return value;
 	}
 	
-	/**
+	/*
 	 * Add a column to the list used for the table with default values
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {node} nTh The th element for this column
@@ -1992,7 +1992,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Apply options for a column
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {int} iCol column index to consider
@@ -2124,7 +2124,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Adjust the table column widths for new data. Note: you would probably want to
 	 * do a redraw after calling this function!
 	 *  @param {object} settings dataTables settings object
@@ -2154,7 +2154,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Covert the index of a visible column to the index in the data array (take account
 	 * of hidden columns)
 	 *  @param {object} oSettings dataTables settings object
@@ -2172,7 +2172,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Covert the index of an index in the data array and convert it to the visible
 	 *   column index (take account of hidden columns)
 	 *  @param {int} iMatch Column index to lookup
@@ -2189,7 +2189,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Get the number of visible columns
 	 *  @param {object} oSettings dataTables settings object
 	 *  @returns {int} i the number of visible columns
@@ -2210,7 +2210,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Get an array of column indexes that match a given property
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {string} sParam Parameter in aoColumns to look for - typically
@@ -2232,7 +2232,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Calculate the 'type' of a column
 	 *  @param {object} settings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -2297,7 +2297,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Take the column definitions and static columns arrays and calculate how
 	 * they relate to column indexes. The callback function will then apply the
 	 * definition found for a column to a suitable configuration object.
@@ -2375,7 +2375,7 @@
 		}
 	}
 	
-	/**
+	/*
 	 * Add a data array to the table, creating DOM node etc. This is the parallel to
 	 * _fnGatherData, but for adding rows from a Javascript source, rather than a
 	 * DOM source.
@@ -2428,7 +2428,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Add one or more TR elements to the table. Generally we'd expect to
 	 * use this for reading data from a DOM sourced table, but it could be
 	 * used for an TR element. Note that if a TR is given, it is used (i.e.
@@ -2454,7 +2454,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Take a TR element and convert it to an index in aoData
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {node} n the TR element to find
@@ -2467,7 +2467,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Take a TD element and convert it into a column data index (not the visible index)
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {int} iRow The row number the TD/TH can be found in
@@ -2481,7 +2481,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Get the data for a given cell from the internal cache, taking into account data mapping
 	 *  @param {object} settings dataTables settings object
 	 *  @param {int} rowIdx aoData row id
@@ -2530,7 +2530,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Set the value for a specific cell, into the internal data cache
 	 *  @param {object} settings dataTables settings object
 	 *  @param {int} rowIdx aoData row id
@@ -2555,7 +2555,7 @@
 	var __reArray = /\[.*?\]$/;
 	var __reFn = /\(\)$/;
 	
-	/**
+	/*
 	 * Split string on periods, taking into account escaped periods
 	 * @param  {string} str String to split
 	 * @return {array} Split string
@@ -2568,7 +2568,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Return a function that can be used to get data from a source object, taking
 	 * into account the ability to use nested objects as a source
 	 *  @param {string|int|function} mSource The data source for the object
@@ -2693,7 +2693,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Return a function that can be used to set data from a source object, taking
 	 * into account the ability to use nested objects as a source
 	 *  @param {string|int|function} mSource The data source for the object
@@ -2813,7 +2813,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Return an array with the full table data
 	 *  @param {object} oSettings dataTables settings object
 	 *  @returns array {array} aData Master data array
@@ -2825,7 +2825,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Nuke the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -2839,7 +2839,7 @@
 	}
 	
 	
-	 /**
+	 /*
 	 * Take an array of integers (index array) and remove a target integer (value - not
 	 * the key!)
 	 *  @param {array} a Index array to target
@@ -2869,7 +2869,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Mark cached data as invalid such that a re-read of the data will occur when
 	 * the cached data is next requested. Also update from the data source object.
 	 *
@@ -2946,7 +2946,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Build a data source object from an HTML row, reading the contents of the
 	 * cells that are in the row.
 	 *
@@ -3062,7 +3062,7 @@
 			cells: tds
 		};
 	}
-	/**
+	/*
 	 * Create a new TR element (and it's TD children) for a row
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {int} iRow Row to consider
@@ -3149,7 +3149,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Add attributes to a row based on the special `DT_*` parameters in a data
 	 * source object.
 	 *  @param {object} settings DataTables settings object
@@ -3191,7 +3191,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Create the HTML header for the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -3269,7 +3269,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Draw the header (or footer) element based on the column visibility states. The
 	 * methodology here is to use the layout array from _fnDetectHeader, modified for
 	 * the instantaneous column visibility, to construct the new layout. The grid is
@@ -3375,7 +3375,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Insert the required TR nodes into the table for display
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -3514,7 +3514,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Redraw the table - taking account of the various features which are enabled
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {boolean} [holdPosition] Keep the current paging position. By default
@@ -3554,7 +3554,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Add the options to the page HTML for the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -3706,7 +3706,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Use the DOM source to create up an array of header cells. The idea here is to
 	 * create a layout grid (array) of rows x columns, which contains a reference
 	 * to the cell that that point in the grid (regardless of col/rowspan), such that
@@ -3782,7 +3782,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Get an array of unique th elements, one for each column
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {node} nHeader automatically detect the layout from this node - optional
@@ -3818,7 +3818,7 @@
 		return aReturn;
 	}
 	
-	/**
+	/*
 	 * Create an Ajax call based on the table's settings, taking into account that
 	 * parameters can have multiple forms, and backwards compatibility.
 	 *
@@ -3954,7 +3954,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Update the table using an Ajax call
 	 *  @param {object} settings dataTables settings object
 	 *  @returns {boolean} Block the table drawing or not
@@ -3980,7 +3980,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Build up the parameters in an object needed for a server-side processing
 	 * request. Note that this is basically done twice, is different ways - a modern
 	 * method which is used by default in DataTables 1.10 which uses objects and
@@ -4088,7 +4088,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Data the data from the server (nuking the old) and redraw the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {object} json json data return from the server.
@@ -4141,7 +4141,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Get the data from the JSON data source to use for drawing a table. Using
 	 * `_fnGetObjectDataFn` allows the data to be sourced from a property of the
 	 * source object, or from a processing function.
@@ -4166,7 +4166,7 @@
 			json;
 	}
 	
-	/**
+	/*
 	 * Generate the node required for filtering text
 	 *  @returns {node} Filter control element
 	 *  @param {object} oSettings dataTables settings object
@@ -4253,7 +4253,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Filter the table using both the global filter and column based filtering
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {object} oSearch search information
@@ -4308,7 +4308,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Apply custom filtering functions
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -4340,7 +4340,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Filter the table on a per-column basis
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {string} sInput string to filter on
@@ -4373,7 +4373,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Filter the data table based on user input and draw the table
 	 *  @param {object} settings dataTables settings object
 	 *  @param {string} input string to filter on
@@ -4429,7 +4429,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Build a regular expression object suitable for searching a table
 	 *  @param {string} sSearch string to search for
 	 *  @param {bool} bRegex treat as a regular expression or not
@@ -4468,7 +4468,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Escape a string such that it can be used in a regular expression
 	 *  @param {string} sVal string to escape
 	 *  @returns {string} escaped string
@@ -4546,7 +4546,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Convert from the internal Hungarian notation to camelCase for external
 	 * interaction
 	 *  @param {object} obj Object to convert
@@ -4565,7 +4565,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Convert from camelCase notation to the internal Hungarian. We could use the
 	 * Hungarian convert function here, but this is cleaner
 	 *  @param {object} obj Object to convert
@@ -4582,7 +4582,7 @@
 		};
 	}
 	
-	/**
+	/*
 	 * Generate the node required for the info display
 	 *  @param {object} oSettings dataTables settings object
 	 *  @returns {node} Information element
@@ -4617,7 +4617,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Update the information elements in the display
 	 *  @param {object} settings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -4682,7 +4682,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Draw the table for the first time, adding all required features
 	 *  @param {object} settings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -4764,7 +4764,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Draw the table for the first time, adding all required features
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {object} [json] JSON from the server that completed the table, if using Ajax source
@@ -4798,7 +4798,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Generate the node required for user display length changing
 	 *  @param {object} settings dataTables settings object
 	 *  @returns {node} Display length feature node
@@ -4864,7 +4864,7 @@
 	 * DataTable.ext.pager
 	 */
 	
-	/**
+	/*
 	 * Generate the node required for default pagination
 	 *  @param {object} oSettings dataTables settings object
 	 *  @returns {node} Pagination feature node
@@ -4922,7 +4922,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Alter the display settings to change the page
 	 *  @param {object} settings DataTables settings object
 	 *  @param {string|int} action Paging action to take: "first", "previous",
@@ -4998,7 +4998,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Generate the node required for the processing node
 	 *  @param {object} settings dataTables settings object
 	 *  @returns {node} Processing element
@@ -5015,7 +5015,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Display or hide the processing indicator
 	 *  @param {object} settings dataTables settings object
 	 *  @param {bool} show Show the processing indicator (true) or not (false)
@@ -5030,7 +5030,7 @@
 		_fnCallbackFire( settings, null, 'processing', [settings, show] );
 	}
 	
-	/**
+	/*
 	 * Add any control elements for the table - specifically scrolling
 	 *  @param {object} settings dataTables settings object
 	 *  @returns {node} Node to add to the DOM
@@ -5180,7 +5180,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Update the header, footer and body tables for resizing - i.e. column
 	 * alignment.
 	 *
@@ -5465,7 +5465,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Apply a given function to the display child nodes of an element array (typically
 	 * TD children of TR rows
 	 *  @param {function} fn Method to apply to the objects
@@ -5507,7 +5507,7 @@
 	var __re_html_remove = /<.*?>/g;
 	
 	
-	/**
+	/*
 	 * Calculate the width of columns for the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -5732,7 +5732,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Throttle the calls to a function. Arguments and context are maintained for
 	 * the throttled function
 	 *  @param {function} fn Function to be called
@@ -5743,7 +5743,7 @@
 	var _fnThrottle = DataTable.util.throttle;
 	
 	
-	/**
+	/*
 	 * Convert a CSS unit width to pixels (e.g. 2em)
 	 *  @param {string} width width to be converted
 	 *  @param {node} parent parent to get the with for (required for relative widths) - optional
@@ -5767,7 +5767,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Get the widest node
 	 *  @param {object} settings dataTables settings object
 	 *  @param {int} colIdx column of interest
@@ -5788,7 +5788,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Get the maximum strlen for each data column
 	 *  @param {object} settings dataTables settings object
 	 *  @param {int} colIdx column of interest
@@ -5814,7 +5814,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Append a CSS unit (only if required) to a string
 	 *  @param {string} value to css-ify
 	 *  @returns {string} value with css unit
@@ -5906,7 +5906,7 @@
 		return aSort;
 	}
 	
-	/**
+	/*
 	 * Change the order of the table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -6083,7 +6083,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Function to run on user sort request
 	 *  @param {object} settings dataTables settings object
 	 *  @param {node} attachTo node to attach the handler to
@@ -6169,7 +6169,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Attach a sort handler (click) to a node
 	 *  @param {object} settings dataTables settings object
 	 *  @param {node} attachTo node to attach the handler to
@@ -6209,7 +6209,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Set the sorting classes on table's body, Note: it is safe to call this function
 	 * when bSort and bSortClasses are false
 	 *  @param {object} oSettings dataTables settings object
@@ -6286,7 +6286,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Save the state of a table
 	 *  @param {object} oSettings dataTables settings object
 	 *  @memberof DataTable#oApi
@@ -6320,7 +6320,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Attempt to load a saved table state
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {object} oInit DataTables init object so we can override settings
@@ -6423,7 +6423,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Return the settings object for a particular table
 	 *  @param {node} table table we are using as a dataTable
 	 *  @returns {object} Settings object - or null if not found
@@ -6440,7 +6440,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Log an error message
 	 *  @param {object} settings dataTables settings object
 	 *  @param {int} level log error messages, or display them to the user
@@ -6483,7 +6483,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * See if a property is defined on one object, if so assign it to the other object
 	 *  @param {object} ret target object
 	 *  @param {object} src source object
@@ -6516,7 +6516,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Extend objects - very similar to jQuery.extend, but deep copy objects, and
 	 * shallow copy arrays. The reason we need to do this, is that we don't want to
 	 * deep copy array init values (such as aaSorting) since the dev wouldn't be
@@ -6560,7 +6560,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Bind an event handers to allow a click or return key to activate the callback.
 	 * This is good for accessibility since a return on the keyboard will have the
 	 * same effect as a click, if the element has focus.
@@ -6589,7 +6589,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Register a callback function. Easily allows a callback function to be added to
 	 * an array store of callback functions that can then all be called together.
 	 *  @param {object} oSettings dataTables settings object
@@ -6610,7 +6610,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Fire callback functions and trigger events. Note that the loop over the
 	 * callback array store is done backwards! Further note that you do not want to
 	 * fire off triggers in time sensitive applications (for example cell creation)
@@ -6692,7 +6692,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Detect the data source being used for the table. Used to simplify the code
 	 * a little (ajax) and to make it compress a little smaller.
 	 *
@@ -6714,7 +6714,7 @@
 
 	
 	
-	/**
+	/*
 	 * Computed structure of the DataTables API, defined by the options passed to
 	 * `DataTable.Api.register()` when building the API.
 	 *
@@ -6753,7 +6753,7 @@
 	var __apiStruct = [];
 	
 	
-	/**
+	/*
 	 * `Array.prototype` reference.
 	 *
 	 * @type object
@@ -6762,7 +6762,7 @@
 	var __arrayProto = Array.prototype;
 	
 	
-	/**
+	/*
 	 * Abstraction for `context` parameter of the `Api` constructor to allow it to
 	 * take several different forms for ease of use.
 	 *
@@ -6823,7 +6823,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * DataTables API class - used to control and interface with  one or more
 	 * DataTables enhanced tables.
 	 *
@@ -7327,7 +7327,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Selector for HTML tables. Apply the given selector to the give array of
 	 * DataTables settings objects.
 	 *
@@ -7360,7 +7360,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Context selector for the API's context (i.e. the tables the API instance
 	 * refers to.
 	 *
@@ -7426,7 +7426,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Redraw the tables in the current context.
 	 */
 	_api_register( 'draw()', function ( paging ) {
@@ -7448,11 +7448,11 @@
 	
 	
 	
-	/**
+	/*
 	 * Get the current page index.
 	 *
 	 * @return {integer} Current page index (zero based)
-	 *//**
+	 *//*
 	 * Set the current page.
 	 *
 	 * Note that if you attempt to show a page which does not exist, DataTables will
@@ -7479,7 +7479,7 @@
 	} );
 	
 	
-	/**
+	/*
 	 * Paging information for the first table in the current context.
 	 *
 	 * If you require paging information for another table, use the `table()` method
@@ -7522,12 +7522,12 @@
 	} );
 	
 	
-	/**
+	/*
 	 * Get the current page length.
 	 *
 	 * @return {integer} Current page length. Note `-1` indicates that all records
 	 *   are to be shown.
-	 *//**
+	 *//*
 	 * Set the current page length.
 	 *
 	 * @param {integer} Page length to set. Use `-1` to show all records.
@@ -7589,7 +7589,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Get the JSON response from the last Ajax request that DataTables made to the
 	 * server. Note that this returns the JSON from the first table in the current
 	 * context.
@@ -7607,7 +7607,7 @@
 	} );
 	
 	
-	/**
+	/*
 	 * Get the data submitted in the last Ajax request
 	 */
 	_api_register( 'ajax.params()', function () {
@@ -7621,7 +7621,7 @@
 	} );
 	
 	
-	/**
+	/*
 	 * Reload tables from the Ajax data source. Note that this function will
 	 * automatically re-draw the table when the remote data has been loaded.
 	 *
@@ -7637,12 +7637,12 @@
 	} );
 	
 	
-	/**
+	/*
 	 * Get the current Ajax URL. Note that this returns the URL from the first
 	 * table in the current context.
 	 *
 	 * @return {string} Current Ajax source URL
-	 *//**
+	 *//*
 	 * Set the Ajax URL. Note that this will set the URL for all tables in the
 	 * current context.
 	 *
@@ -7681,7 +7681,7 @@
 	} );
 	
 	
-	/**
+	/*
 	 * Load data from the newly set Ajax URL. Note that this method is only
 	 * available when `ajax.url()` is used to set a URL. Additionally, this method
 	 * has the same effect as calling `ajax.reload()` but is provided for
@@ -8104,7 +8104,7 @@
 	
 	
 	
-	/**
+	/*
 	 *
 	 */
 	_api_register( 'row()', function ( selector, opts ) {
@@ -8885,7 +8885,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Get current ordering (sorting) that has been applied to the table.
 	 *
 	 * @returns {array} 2D array containing the sorting information for the first
@@ -8895,19 +8895,19 @@
 	 *   the column index that the sorting condition applies to, the second is the
 	 *   direction of the sort (`desc` or `asc`) and, optionally, the third is the
 	 *   index of the sorting order from the `column.sorting` initialisation array.
-	 *//**
+	 *//*
 	 * Set the ordering for the table.
 	 *
 	 * @param {integer} order Column index to sort upon.
 	 * @param {string} direction Direction of the sort to be applied (`asc` or `desc`)
 	 * @returns {DataTables.Api} this
-	 *//**
+	 *//*
 	 * Set the ordering for the table.
 	 *
 	 * @param {array} order 1D array of sorting information to be applied.
 	 * @param {array} [...] Optional additional sorting conditions
 	 * @returns {DataTables.Api} this
-	 *//**
+	 *//*
 	 * Set the ordering for the table.
 	 *
 	 * @param {array} order 2D array of sorting information to be applied.
@@ -8940,7 +8940,7 @@
 	} );
 	
 	
-	/**
+	/*
 	 * Attach a sort listener to an element for a given column
 	 *
 	 * @param {node|jQuery|string} node Identifier for the element(s) to attach the
@@ -9084,7 +9084,7 @@
 	
 	
 	
-	/**
+	/*
 	 * Provide a common method for plug-ins to check the version of DataTables being
 	 * used, in order to ensure compatibility.
 	 *
@@ -9122,7 +9122,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Check if a `<table>` node is a DataTable table already or not.
 	 *
 	 *  @param {node|jquery|string} table Table node, jQuery object or jQuery
@@ -9159,7 +9159,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Get all DataTable tables that have been initialised - optionally you can
 	 * select to get only currently visible tables.
 	 *
@@ -9196,7 +9196,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Convert from camel case parameters to Hungarian notation. This is made public
 	 * for the extensions to provide the same ability as DataTables core to accept
 	 * either the 1.9 style Hungarian notation, or the 1.10+ style camelCase
@@ -9213,7 +9213,7 @@
 	
 	
 	
-	/**
+	/*
 	 *
 	 */
 	_api_register( '$()', function ( selector, opts ) {
@@ -9417,7 +9417,7 @@
 		return resolved.replace( '%d', plural ); // nb: plural might be undefined,
 	} );
 
-	/**
+	/*
 	 * Version string for plug-ins to check compatibility. Allowed format is
 	 * `a.b.c-d` where: a:int, b:int, c:int, d:string(dev|beta|alpha). `d` is used
 	 * only for non-release builds. See http://semver.org/ for more information.
@@ -9427,7 +9427,7 @@
 	 */
 	DataTable.version = "1.10.16";
 
-	/**
+	/*
 	 * Private data store, containing all of the settings objects that are
 	 * created for the tables on a given page.
 	 *
@@ -9441,7 +9441,7 @@
 	 */
 	DataTable.settings = [];
 
-	/**
+	/*
 	 * Object models container, for the various models that DataTables has
 	 * available to it. These models define the objects that are used to hold
 	 * the active state and configuration of the table.
@@ -9451,27 +9451,27 @@
 	
 	
 	
-	/**
+	/*
 	 * Template object for the way in which DataTables holds information about
 	 * search information for the global filter and individual column filters.
 	 *  @namespace
 	 */
 	DataTable.models.oSearch = {
-		/**
+		/*
 		 * Flag to indicate if the filtering should be case insensitive or not
 		 *  @type boolean
 		 *  @default true
 		 */
 		"bCaseInsensitive": true,
 	
-		/**
+		/*
 		 * Applied search term
 		 *  @type string
 		 *  @default <i>Empty string</i>
 		 */
 		"sSearch": "",
 	
-		/**
+		/*
 		 * Flag to indicate if the search term should be interpreted as a
 		 * regular expression (true) or not (false) and therefore and special
 		 * regex characters escaped.
@@ -9480,7 +9480,7 @@
 		 */
 		"bRegex": false,
 	
-		/**
+		/*
 		 * Flag to indicate if DataTables is to use its smart filtering or not.
 		 *  @type boolean
 		 *  @default true
@@ -9491,21 +9491,21 @@
 	
 	
 	
-	/**
+	/*
 	 * Template object for the way in which DataTables holds information about
 	 * each individual row. This is the object format used for the settings
 	 * aoData array.
 	 *  @namespace
 	 */
 	DataTable.models.oRow = {
-		/**
+		/*
 		 * TR element for the row
 		 *  @type node
 		 *  @default null
 		 */
 		"nTr": null,
 	
-		/**
+		/*
 		 * Array of TD elements for each row. This is null until the row has been
 		 * created.
 		 *  @type array nodes
@@ -9513,7 +9513,7 @@
 		 */
 		"anCells": null,
 	
-		/**
+		/*
 		 * Data object from the original data source for the row. This is either
 		 * an array if using the traditional form of DataTables, or an object if
 		 * using mData options. The exact type will depend on the passed in
@@ -9524,7 +9524,7 @@
 		 */
 		"_aData": [],
 	
-		/**
+		/*
 		 * Sorting data cache - this array is ostensibly the same length as the
 		 * number of columns (although each index is generated only as it is
 		 * needed), and holds the data that is used for sorting each column in the
@@ -9538,7 +9538,7 @@
 		 */
 		"_aSortData": null,
 	
-		/**
+		/*
 		 * Per cell filtering data cache. As per the sort data cache, used to
 		 * increase the performance of the filtering in DataTables
 		 *  @type array
@@ -9547,7 +9547,7 @@
 		 */
 		"_aFilterData": null,
 	
-		/**
+		/*
 		 * Filtering data cache. This is the same as the cell filtering cache, but
 		 * in this case a string rather than an array. This is easily computed with
 		 * a join on `_aFilterData`, but is provided as a cache so the join isn't
@@ -9558,7 +9558,7 @@
 		 */
 		"_sFilterRow": null,
 	
-		/**
+		/*
 		 * Cache of the class name that DataTables has applied to the row, so we
 		 * can quickly look at this variable rather than needing to do a DOM check
 		 * on className for the nTr property.
@@ -9568,7 +9568,7 @@
 		 */
 		"_sRowStripe": "",
 	
-		/**
+		/*
 		 * Denote if the original data source was from the DOM, or the data source
 		 * object. This is used for invalidating data, so DataTables can
 		 * automatically read data from the original source, unless uninstructed
@@ -9579,7 +9579,7 @@
 		 */
 		"src": null,
 	
-		/**
+		/*
 		 * Index in the aoData array. This saves an indexOf lookup when we have the
 		 * object, but want to know the index
 		 *  @type integer
@@ -9590,7 +9590,7 @@
 	};
 	
 	
-	/**
+	/*
 	 * Template object for the column information object in DataTables. This object
 	 * is held in the settings aoColumns array and contains all the information that
 	 * DataTables needs about each individual column.
@@ -9602,7 +9602,7 @@
 	 *  @namespace
 	 */
 	DataTable.models.oColumn = {
-		/**
+		/*
 		 * Column index. This could be worked out on-the-fly with $.inArray, but it
 		 * is faster to just hold it as a variable
 		 *  @type integer
@@ -9610,7 +9610,7 @@
 		 */
 		"idx": null,
 	
-		/**
+		/*
 		 * A list of the columns that sorting should occur on when this column
 		 * is sorted. That this property is an array allows multi-column sorting
 		 * to be defined for a column (for example first name / last name columns
@@ -9621,7 +9621,7 @@
 		 */
 		"aDataSort": null,
 	
-		/**
+		/*
 		 * Define the sorting directions that are applied to the column, in sequence
 		 * as the column is repeatedly sorted upon - i.e. the first value is used
 		 * as the sorting direction when the column if first sorted (clicked on).
@@ -9631,26 +9631,26 @@
 		 */
 		"asSorting": null,
 	
-		/**
+		/*
 		 * Flag to indicate if the column is searchable, and thus should be included
 		 * in the filtering or not.
 		 *  @type boolean
 		 */
 		"bSearchable": null,
 	
-		/**
+		/*
 		 * Flag to indicate if the column is sortable or not.
 		 *  @type boolean
 		 */
 		"bSortable": null,
 	
-		/**
+		/*
 		 * Flag to indicate if the column is currently visible in the table or not
 		 *  @type boolean
 		 */
 		"bVisible": null,
 	
-		/**
+		/*
 		 * Store for manual type assignment using the `column.type` option. This
 		 * is held in store so we can manipulate the column's `sType` property.
 		 *  @type string
@@ -9659,7 +9659,7 @@
 		 */
 		"_sManualType": null,
 	
-		/**
+		/*
 		 * Flag to indicate if HTML5 data attributes should be used as the data
 		 * source for filtering or sorting. True is either are.
 		 *  @type boolean
@@ -9668,7 +9668,7 @@
 		 */
 		"_bAttrSrc": false,
 	
-		/**
+		/*
 		 * Developer definable function that is called whenever a cell is created (Ajax source,
 		 * etc) or processed for input (DOM source). This can be used as a compliment to mRender
 		 * allowing you to modify the DOM element (add background colour for example) when the
@@ -9682,7 +9682,7 @@
 		 */
 		"fnCreatedCell": null,
 	
-		/**
+		/*
 		 * Function to get data from a cell in a column. You should <b>never</b>
 		 * access data directly through _aData internally in DataTables - always use
 		 * the method attached to this property. It allows mData to function as
@@ -9698,7 +9698,7 @@
 		 */
 		"fnGetData": null,
 	
-		/**
+		/*
 		 * Function to set data for a cell in the column. You should <b>never</b>
 		 * set the data directly to _aData internally in DataTables - always use
 		 * this method. It allows mData to function as required. This function
@@ -9711,7 +9711,7 @@
 		 */
 		"fnSetData": null,
 	
-		/**
+		/*
 		 * Property to read the value for the cells in the column from the data
 		 * source array / object. If null, then the default content is used, if a
 		 * function is given then the return from the function is used.
@@ -9720,7 +9720,7 @@
 		 */
 		"mData": null,
 	
-		/**
+		/*
 		 * Partner property to mData which is used (only when defined) to get
 		 * the data - i.e. it is basically the same as mData, but without the
 		 * 'set' option, and also the data fed to it is the result from mData.
@@ -9730,7 +9730,7 @@
 		 */
 		"mRender": null,
 	
-		/**
+		/*
 		 * Unique header TH/TD element for this column - this is what the sorting
 		 * listener is attached to (if sorting is enabled.)
 		 *  @type node
@@ -9738,7 +9738,7 @@
 		 */
 		"nTh": null,
 	
-		/**
+		/*
 		 * Unique footer TH/TD element for this column (if there is one). Not used
 		 * in DataTables as such, but can be used for plug-ins to reference the
 		 * footer for each column.
@@ -9747,14 +9747,14 @@
 		 */
 		"nTf": null,
 	
-		/**
+		/*
 		 * The class to apply to all TD elements in the table's TBODY for the column
 		 *  @type string
 		 *  @default null
 		 */
 		"sClass": null,
 	
-		/**
+		/*
 		 * When DataTables calculates the column widths to assign to each column,
 		 * it finds the longest string in each column and then constructs a
 		 * temporary table and reads the widths from that. The problem with this
@@ -9767,7 +9767,7 @@
 		 */
 		"sContentPadding": null,
 	
-		/**
+		/*
 		 * Allows a default value to be given for a column's data, and will be used
 		 * whenever a null data source is encountered (this can be because mData
 		 * is set to null, or because the data source itself is null).
@@ -9776,14 +9776,14 @@
 		 */
 		"sDefaultContent": null,
 	
-		/**
+		/*
 		 * Name for the column, allowing reference to the column by name as well as
 		 * by index (needs a lookup to work by name).
 		 *  @type string
 		 */
 		"sName": null,
 	
-		/**
+		/*
 		 * Custom sorting data type - defines which of the available plug-ins in
 		 * afnSortData the custom sorting will use - if any is defined.
 		 *  @type string
@@ -9791,14 +9791,14 @@
 		 */
 		"sSortDataType": 'std',
 	
-		/**
+		/*
 		 * Class to be applied to the header element when sorting on this column
 		 *  @type string
 		 *  @default null
 		 */
 		"sSortingClass": null,
 	
-		/**
+		/*
 		 * Class to be applied to the header element when sorting on this column -
 		 * when jQuery UI theming is used.
 		 *  @type string
@@ -9806,27 +9806,27 @@
 		 */
 		"sSortingClassJUI": null,
 	
-		/**
+		/*
 		 * Title of the column - what is seen in the TH element (nTh).
 		 *  @type string
 		 */
 		"sTitle": null,
 	
-		/**
+		/*
 		 * Column sorting and filtering type
 		 *  @type string
 		 *  @default null
 		 */
 		"sType": null,
 	
-		/**
+		/*
 		 * Width of the column
 		 *  @type string
 		 *  @default null
 		 */
 		"sWidth": null,
 	
-		/**
+		/*
 		 * Width of the column when it was first "encountered"
 		 *  @type string
 		 *  @default null
@@ -9851,13 +9851,13 @@
 	 * installs (therefore is on-hold until v2).
 	 */
 	
-	/**
+	/*
 	 * Initialisation options that can be given to DataTables at initialisation
 	 * time.
 	 *  @namespace
 	 */
 	DataTable.defaults = {
-		/**
+		/*
 		 * An array of data to use for the table, passed in at initialisation which
 		 * will be used in preference to any data which is already in the DOM. This is
 		 * particularly useful for constructing tables purely in Javascript, for
@@ -9919,7 +9919,7 @@
 		"aaData": null,
 	
 	
-		/**
+		/*
 		 * If ordering is enabled, then DataTables will perform a first pass sort on
 		 * initialisation. You can define which column(s) the sort is performed
 		 * upon, and the sorting direction, with this variable. The `sorting` array
@@ -9949,7 +9949,7 @@
 		"aaSorting": [[0,'asc']],
 	
 	
-		/**
+		/*
 		 * This parameter is basically identical to the `sorting` parameter, but
 		 * cannot be overridden by user interaction with the table. What this means
 		 * is that you could have a column (visible or hidden) which the sorting
@@ -9972,7 +9972,7 @@
 		"aaSortingFixed": [],
 	
 	
-		/**
+		/*
 		 * DataTables can be instructed to load data to display in the table from a
 		 * Ajax source. This option defines how that Ajax call is made and where to.
 		 *
@@ -10129,7 +10129,7 @@
 		"ajax": null,
 	
 	
-		/**
+		/*
 		 * This parameter allows you to readily specify the entries in the length drop
 		 * down menu that DataTables shows when pagination is enabled. It can be
 		 * either a 1D array of options which will be used for both the displayed
@@ -10155,7 +10155,7 @@
 		"aLengthMenu": [ 10, 25, 50, 100 ],
 	
 	
-		/**
+		/*
 		 * The `columns` option in the initialisation parameter allows you to define
 		 * details about the way individual columns behave. For a full list of
 		 * column options that can be set, please see
@@ -10169,7 +10169,7 @@
 		 */
 		"aoColumns": null,
 	
-		/**
+		/*
 		 * Very similar to `columns`, `columnDefs` allows you to target a specific
 		 * column, multiple columns, or all columns, using the `targets` property of
 		 * each object in the array. This allows great flexibility when creating
@@ -10191,7 +10191,7 @@
 		"aoColumnDefs": null,
 	
 	
-		/**
+		/*
 		 * Basically the same as `search`, this parameter defines the individual column
 		 * filtering state at initialisation time. The array must be of the same size
 		 * as the number of columns, and each element be an object with the parameters
@@ -10218,7 +10218,7 @@
 		"aoSearchCols": [],
 	
 	
-		/**
+		/*
 		 * An array of CSS classes that should be applied to displayed rows. This
 		 * array may be of any length, and DataTables will apply each class
 		 * sequentially, looping when required.
@@ -10239,7 +10239,7 @@
 		"asStripeClasses": null,
 	
 	
-		/**
+		/*
 		 * Enable or disable automatic column width calculation. This can be disabled
 		 * as an optimisation (it takes some time to calculate the widths) if the
 		 * tables widths are passed in using `columns`.
@@ -10259,7 +10259,7 @@
 		"bAutoWidth": true,
 	
 	
-		/**
+		/*
 		 * Deferred rendering can provide DataTables with a huge speed boost when you
 		 * are using an Ajax or JS data source for the table. This option, when set to
 		 * true, will cause DataTables to defer the creation of the table elements for
@@ -10282,7 +10282,7 @@
 		"bDeferRender": false,
 	
 	
-		/**
+		/*
 		 * Replace a DataTable which matches the given selector and replace it with
 		 * one which has the properties of the new initialisation object passed. If no
 		 * table matches the selector, then the new DataTable will be constructed as
@@ -10310,7 +10310,7 @@
 		"bDestroy": false,
 	
 	
-		/**
+		/*
 		 * Enable or disable filtering of data. Filtering in DataTables is "smart" in
 		 * that it allows the end user to input multiple words (space separated) and
 		 * will match a row containing those words, even if not in the order that was
@@ -10334,7 +10334,7 @@
 		"bFilter": true,
 	
 	
-		/**
+		/*
 		 * Enable or disable the table information display. This shows information
 		 * about the data that is currently visible on the page, including information
 		 * about filtered data if that action is being performed.
@@ -10354,7 +10354,7 @@
 		"bInfo": true,
 	
 	
-		/**
+		/*
 		 * Allows the end user to select the size of a formatted page from a select
 		 * menu (sizes are 10, 25, 50 and 100). Requires pagination (`paginate`).
 		 *  @type boolean
@@ -10373,7 +10373,7 @@
 		"bLengthChange": true,
 	
 	
-		/**
+		/*
 		 * Enable or disable pagination.
 		 *  @type boolean
 		 *  @default true
@@ -10391,7 +10391,7 @@
 		"bPaginate": true,
 	
 	
-		/**
+		/*
 		 * Enable or disable the display of a 'processing' indicator when the table is
 		 * being processed (e.g. a sort). This is particularly useful for tables with
 		 * large amounts of data where it can take a noticeable amount of time to sort
@@ -10412,7 +10412,7 @@
 		"bProcessing": false,
 	
 	
-		/**
+		/*
 		 * Retrieve the DataTables object for the given selector. Note that if the
 		 * table has already been initialised, this parameter will cause DataTables
 		 * to simply return the object that has already been set up - it will not take
@@ -10450,7 +10450,7 @@
 		"bRetrieve": false,
 	
 	
-		/**
+		/*
 		 * When vertical (y) scrolling is enabled, DataTables will force the height of
 		 * the table's viewport to the given height at all times (useful for layout).
 		 * However, this can look odd when filtering data down to a small data set,
@@ -10474,7 +10474,7 @@
 		"bScrollCollapse": false,
 	
 	
-		/**
+		/*
 		 * Configure DataTables to use server-side processing. Note that the
 		 * `ajax` parameter must also be given in order to give DataTables a
 		 * source to obtain the required data for each draw.
@@ -10496,7 +10496,7 @@
 		"bServerSide": false,
 	
 	
-		/**
+		/*
 		 * Enable or disable sorting of columns. Sorting of individual columns can be
 		 * disabled by the `sortable` option for each column.
 		 *  @type boolean
@@ -10515,7 +10515,7 @@
 		"bSort": true,
 	
 	
-		/**
+		/*
 		 * Enable or display DataTables' ability to sort multiple columns at the
 		 * same time (activated by shift-click by the user).
 		 *  @type boolean
@@ -10535,7 +10535,7 @@
 		"bSortMulti": true,
 	
 	
-		/**
+		/*
 		 * Allows control over whether DataTables should use the top (true) unique
 		 * cell that is found for a single column, or the bottom (false - default).
 		 * This is useful when using complex headers.
@@ -10555,7 +10555,7 @@
 		"bSortCellsTop": false,
 	
 	
-		/**
+		/*
 		 * Enable or disable the addition of the classes `sorting\_1`, `sorting\_2` and
 		 * `sorting\_3` to the columns which are currently being sorted on. This is
 		 * presented as a feature switch as it can increase processing time (while
@@ -10577,7 +10577,7 @@
 		"bSortClasses": true,
 	
 	
-		/**
+		/*
 		 * Enable or disable state saving. When enabled HTML5 `localStorage` will be
 		 * used to save table display information such as pagination information,
 		 * display length, filtering and sorting. As such when the end user reloads
@@ -10602,7 +10602,7 @@
 		"bStateSave": false,
 	
 	
-		/**
+		/*
 		 * This function is called when a TR element is created (and all TD child
 		 * elements have been inserted), or registered if using a DOM source, allowing
 		 * manipulation of the TR element (adding classes etc).
@@ -10630,7 +10630,7 @@
 		"fnCreatedRow": null,
 	
 	
-		/**
+		/*
 		 * This function is called on every 'draw' event, and allows you to
 		 * dynamically modify any aspect you want about the created DOM.
 		 *  @type function
@@ -10651,7 +10651,7 @@
 		"fnDrawCallback": null,
 	
 	
-		/**
+		/*
 		 * Identical to fnHeaderCallback() but for the table footer this function
 		 * allows you to modify the table footer on every 'draw' event.
 		 *  @type function
@@ -10679,7 +10679,7 @@
 		"fnFooterCallback": null,
 	
 	
-		/**
+		/*
 		 * When rendering large numbers in the information element for the table
 		 * (i.e. "Showing 1 to 10 of 57 entries") DataTables will render large numbers
 		 * to have a comma separator for the 'thousands' units (e.g. 1 million is
@@ -10714,7 +10714,7 @@
 		},
 	
 	
-		/**
+		/*
 		 * This function is called on every 'draw' event, and allows you to
 		 * dynamically modify the header row. This can be used to calculate and
 		 * display useful information about the table.
@@ -10743,7 +10743,7 @@
 		"fnHeaderCallback": null,
 	
 	
-		/**
+		/*
 		 * The information element can be used to convey information about the current
 		 * state of the table. Although the internationalisation options presented by
 		 * DataTables are quite capable of dealing with most customisations, there may
@@ -10773,7 +10773,7 @@
 		"fnInfoCallback": null,
 	
 	
-		/**
+		/*
 		 * Called when the table has been initialised. Normally DataTables will
 		 * initialise sequentially and there will be no need for this function,
 		 * however, this does not hold true when using external language information
@@ -10798,7 +10798,7 @@
 		"fnInitComplete": null,
 	
 	
-		/**
+		/*
 		 * Called at the very start of each table draw and can be used to cancel the
 		 * draw by returning false, any other return (including undefined) results in
 		 * the full draw occurring).
@@ -10824,7 +10824,7 @@
 		"fnPreDrawCallback": null,
 	
 	
-		/**
+		/*
 		 * This function allows you to 'post process' each row after it have been
 		 * generated for each table draw, but before it is rendered on screen. This
 		 * function might be used for setting the row class name etc.
@@ -10853,7 +10853,7 @@
 		"fnRowCallback": null,
 	
 	
-		/**
+		/*
 		 * __Deprecated__ The functionality provided by this parameter has now been
 		 * superseded by that provided through `ajax`, which should be used instead.
 		 *
@@ -10879,7 +10879,7 @@
 		"fnServerData": null,
 	
 	
-		/**
+		/*
 		 * __Deprecated__ The functionality provided by this parameter has now been
 		 * superseded by that provided through `ajax`, which should be used instead.
 		 *
@@ -10906,7 +10906,7 @@
 		"fnServerParams": null,
 	
 	
-		/**
+		/*
 		 * Load the table state. With this function you can define from where, and how, the
 		 * state of a table is loaded. By default DataTables will load from `localStorage`
 		 * but you might wish to use a server-side database or cookies.
@@ -10947,7 +10947,7 @@
 		},
 	
 	
-		/**
+		/*
 		 * Callback which allows modification of the saved state prior to loading that state.
 		 * This callback is called when the table is loading state from the stored data, but
 		 * prior to the settings object being modified by the saved state. Note that for
@@ -10985,7 +10985,7 @@
 		"fnStateLoadParams": null,
 	
 	
-		/**
+		/*
 		 * Callback that is called when the state has been loaded from the state saving method
 		 * and the DataTables settings object has been modified as a result of the loaded state.
 		 *  @type function
@@ -11009,7 +11009,7 @@
 		"fnStateLoaded": null,
 	
 	
-		/**
+		/*
 		 * Save the table state. This function allows you to define where and how the state
 		 * information for the table is stored By default DataTables will use `localStorage`
 		 * but you might wish to use a server-side database or cookies.
@@ -11048,7 +11048,7 @@
 		},
 	
 	
-		/**
+		/*
 		 * Callback which allows modification of the state to be saved. Called when the table
 		 * has changed state a new state save is required. This method allows modification of
 		 * the state saving object prior to actually doing the save, including addition or
@@ -11075,7 +11075,7 @@
 		"fnStateSaveParams": null,
 	
 	
-		/**
+		/*
 		 * Duration for which the saved state information is considered valid. After this period
 		 * has elapsed the state will be returned to the default.
 		 * Value is given in seconds.
@@ -11095,7 +11095,7 @@
 		"iStateDuration": 7200,
 	
 	
-		/**
+		/*
 		 * When enabled DataTables will not make a request to the server for the first
 		 * page draw - rather it will use the data already on the page (no sorting etc
 		 * will be applied to it), thus saving on an XHR at load time. `deferLoading`
@@ -11139,7 +11139,7 @@
 		"iDeferLoading": null,
 	
 	
-		/**
+		/*
 		 * Number of rows to display on a single page when using pagination. If
 		 * feature enabled (`lengthChange`) then the end user will be able to override
 		 * this to a custom setting using a pop-up menu.
@@ -11159,7 +11159,7 @@
 		"iDisplayLength": 10,
 	
 	
-		/**
+		/*
 		 * Define the starting point for data display when using DataTables with
 		 * pagination. Note that this parameter is the number of records, rather than
 		 * the page number, so if you have 10 records per page and want to start on
@@ -11180,7 +11180,7 @@
 		"iDisplayStart": 0,
 	
 	
-		/**
+		/*
 		 * By default DataTables allows keyboard navigation of the table (sorting, paging,
 		 * and filtering) by adding a `tabindex` attribute to the required elements. This
 		 * allows you to tab through the controls and press the enter key to activate them.
@@ -11203,7 +11203,7 @@
 		"iTabIndex": 0,
 	
 	
-		/**
+		/*
 		 * Classes that DataTables assigns to the various components and features
 		 * that it adds to the HTML table. This allows classes to be configured
 		 * during initialisation in addition to through the static
@@ -11214,7 +11214,7 @@
 		"oClasses": {},
 	
 	
-		/**
+		/*
 		 * All strings that DataTables uses in the user interface that it creates
 		 * are defined in this object, allowing you to modified them individually or
 		 * completely replace them all as required.
@@ -11222,7 +11222,7 @@
 		 *  @name DataTable.defaults.language
 		 */
 		"oLanguage": {
-			/**
+			/*
 			 * Strings that are used for WAI-ARIA labels and controls only (these are not
 			 * actually visible on the page, but will be read by screenreaders, and thus
 			 * must be internationalised as well).
@@ -11230,7 +11230,7 @@
 			 *  @name DataTable.defaults.language.aria
 			 */
 			"oAria": {
-				/**
+				/*
 				 * ARIA label that is added to the table headers when the column may be
 				 * sorted ascending by activing the column (click or return when focused).
 				 * Note that the column header is prefixed to this string.
@@ -11253,7 +11253,7 @@
 				 */
 				"sSortAscending": ": activate to sort column ascending",
 	
-				/**
+				/*
 				 * ARIA label that is added to the table headers when the column may be
 				 * sorted descending by activing the column (click or return when focused).
 				 * Note that the column header is prefixed to this string.
@@ -11277,14 +11277,14 @@
 				"sSortDescending": ": activate to sort column descending"
 			},
 	
-			/**
+			/*
 			 * Pagination string used by DataTables for the built-in pagination
 			 * control types.
 			 *  @namespace
 			 *  @name DataTable.defaults.language.paginate
 			 */
 			"oPaginate": {
-				/**
+				/*
 				 * Text to use when using the 'full_numbers' type of pagination for the
 				 * button to take the user to the first page.
 				 *  @type string
@@ -11307,7 +11307,7 @@
 				"sFirst": "First",
 	
 	
-				/**
+				/*
 				 * Text to use when using the 'full_numbers' type of pagination for the
 				 * button to take the user to the last page.
 				 *  @type string
@@ -11330,7 +11330,7 @@
 				"sLast": "Last",
 	
 	
-				/**
+				/*
 				 * Text to use for the 'next' pagination button (to take the user to the
 				 * next page).
 				 *  @type string
@@ -11353,7 +11353,7 @@
 				"sNext": "Next",
 	
 	
-				/**
+				/*
 				 * Text to use for the 'previous' pagination button (to take the user to
 				 * the previous page).
 				 *  @type string
@@ -11376,7 +11376,7 @@
 				"sPrevious": "Previous"
 			},
 	
-			/**
+			/*
 			 * This string is shown in preference to `zeroRecords` when the table is
 			 * empty of data (regardless of filtering). Note that this is an optional
 			 * parameter - if it is not given, the value of `zeroRecords` will be used
@@ -11399,7 +11399,7 @@
 			"sEmptyTable": "No data available in table",
 	
 	
-			/**
+			/*
 			 * This string gives information to the end user about the information
 			 * that is current on display on the page. The following tokens can be
 			 * used in the string and will be dynamically replaced as the table
@@ -11431,7 +11431,7 @@
 			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
 	
 	
-			/**
+			/*
 			 * Display information string for when the table is empty. Typically the
 			 * format of this string should match `info`.
 			 *  @type string
@@ -11452,7 +11452,7 @@
 			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
 	
 	
-			/**
+			/*
 			 * When a user filters the information in a table, this string is appended
 			 * to the information (`info`) to give an idea of how strong the filtering
 			 * is. The variable _MAX_ is dynamically updated.
@@ -11474,7 +11474,7 @@
 			"sInfoFiltered": "(filtered from _MAX_ total entries)",
 	
 	
-			/**
+			/*
 			 * If can be useful to append extra information to the info string at times,
 			 * and this variable does exactly that. This information will be appended to
 			 * the `info` (`infoEmpty` and `infoFiltered` in whatever combination they are
@@ -11497,7 +11497,7 @@
 			"sInfoPostFix": "",
 	
 	
-			/**
+			/*
 			 * This decimal place operator is a little different from the other
 			 * language options since DataTables doesn't output floating point
 			 * numbers, so it won't ever use this for display of a number. Rather,
@@ -11528,7 +11528,7 @@
 			"sDecimal": "",
 	
 	
-			/**
+			/*
 			 * DataTables has a build in number formatter (`formatNumber`) which is
 			 * used to format large numbers that are used in the table information.
 			 * By default a comma is used, but this can be trivially changed to any
@@ -11551,7 +11551,7 @@
 			"sThousands": ",",
 	
 	
-			/**
+			/*
 			 * Detail the action that will be taken when the drop down menu for the
 			 * pagination length option is changed. The '_MENU_' variable is replaced
 			 * with a default select list of 10, 25, 50 and 100, and can be replaced
@@ -11592,7 +11592,7 @@
 			"sLengthMenu": "Show _MENU_ entries",
 	
 	
-			/**
+			/*
 			 * When using Ajax sourced data and during the first draw when DataTables is
 			 * gathering the data, this message is shown in an empty row in the table to
 			 * indicate to the end user the the data is being loaded. Note that this
@@ -11616,7 +11616,7 @@
 			"sLoadingRecords": "Loading...",
 	
 	
-			/**
+			/*
 			 * Text which is displayed when the table is processing a user action
 			 * (usually a sort command or similar).
 			 *  @type string
@@ -11637,7 +11637,7 @@
 			"sProcessing": "Processing...",
 	
 	
-			/**
+			/*
 			 * Details the actions that will be taken when the user types into the
 			 * filtering input text box. The variable "_INPUT_", if used in the string,
 			 * is replaced with the HTML text box for the filtering input allowing
@@ -11672,7 +11672,7 @@
 			"sSearch": "Search:",
 	
 	
-			/**
+			/*
 			 * Assign a `placeholder` attribute to the search `input` element
 			 *  @type string
 			 *  @default 
@@ -11683,7 +11683,7 @@
 			"sSearchPlaceholder": "",
 	
 	
-			/**
+			/*
 			 * All of the language information can be stored in a file on the
 			 * server-side, which DataTables will look up if this parameter is passed.
 			 * It must store the URL of the language file, which is in a JSON format,
@@ -11708,7 +11708,7 @@
 			"sUrl": "",
 	
 	
-			/**
+			/*
 			 * Text shown inside the table records when the is no information to be
 			 * displayed after filtering. `emptyTable` is shown when there is simply no
 			 * information in the table at all (regardless of filtering).
@@ -11731,7 +11731,7 @@
 		},
 	
 	
-		/**
+		/*
 		 * This parameter allows you to have define the global filtering state at
 		 * initialisation time. As an object the `search` parameter must be
 		 * defined, but all other parameters are optional. When `regex` is true,
@@ -11755,7 +11755,7 @@
 		"oSearch": $.extend( {}, DataTable.models.oSearch ),
 	
 	
-		/**
+		/*
 		 * __Deprecated__ The functionality provided by this parameter has now been
 		 * superseded by that provided through `ajax`, which should be used instead.
 		 *
@@ -11776,7 +11776,7 @@
 		"sAjaxDataProp": "data",
 	
 	
-		/**
+		/*
 		 * __Deprecated__ The functionality provided by this parameter has now been
 		 * superseded by that provided through `ajax`, which should be used instead.
 		 *
@@ -11795,7 +11795,7 @@
 		"sAjaxSource": null,
 	
 	
-		/**
+		/*
 		 * This initialisation variable allows you to specify exactly where in the
 		 * DOM you want DataTables to inject the various controls it adds to the page
 		 * (for example you might want the pagination controls at the top of the
@@ -11849,7 +11849,7 @@
 		"sDom": "lfrtip",
 	
 	
-		/**
+		/*
 		 * Search delay option. This will throttle full table searches that use the
 		 * DataTables provided search input element (it does not effect calls to
 		 * `dt-api search()`, providing a delay before the search is made.
@@ -11869,7 +11869,7 @@
 		"searchDelay": null,
 	
 	
-		/**
+		/*
 		 * DataTables features six different built-in options for the buttons to
 		 * display for pagination control:
 		 *
@@ -11897,7 +11897,7 @@
 		"sPaginationType": "simple_numbers",
 	
 	
-		/**
+		/*
 		 * Enable horizontal scrolling. When a table is too wide to fit into a
 		 * certain layout, or you have a large number of columns in the table, you
 		 * can enable x-scrolling to show the table in a viewport, which can be
@@ -11922,7 +11922,7 @@
 		"sScrollX": "",
 	
 	
-		/**
+		/*
 		 * This property can be used to force a DataTable to use more width than it
 		 * might otherwise do when x-scrolling is enabled. For example if you have a
 		 * table which requires to be well spaced, this parameter is useful for
@@ -11946,7 +11946,7 @@
 		"sScrollXInner": "",
 	
 	
-		/**
+		/*
 		 * Enable vertical scrolling. Vertical scrolling will constrain the DataTable
 		 * to the given height, and enable scrolling for any data which overflows the
 		 * current viewport. This can be used as an alternative to paging to display
@@ -11970,7 +11970,7 @@
 		"sScrollY": "",
 	
 	
-		/**
+		/*
 		 * __Deprecated__ The functionality provided by this parameter has now been
 		 * superseded by that provided through `ajax`, which should be used instead.
 		 *
@@ -11988,7 +11988,7 @@
 		"sServerMethod": "GET",
 	
 	
-		/**
+		/*
 		 * DataTables makes use of renderers when displaying HTML elements for
 		 * a table. These renderers can be added or modified by plug-ins to
 		 * generate suitable mark-up for a site. For example the Bootstrap
@@ -12006,7 +12006,7 @@
 		"renderer": null,
 	
 	
-		/**
+		/*
 		 * Set the data property name that DataTables should use to get a row's id
 		 * to set as the `id` property in the node.
 		 *  @type string
@@ -12026,12 +12026,12 @@
 	 * notation and camel case.
 	 */
 	
-	/**
+	/*
 	 * Column options that can be given to DataTables at initialisation time.
 	 *  @namespace
 	 */
 	DataTable.defaults.column = {
-		/**
+		/*
 		 * Define which column(s) an order will occur on for this column. This
 		 * allows a column's ordering to take multiple columns into account when
 		 * doing a sort or use the data from a different column. For example first
@@ -12073,7 +12073,7 @@
 		"iDataSort": -1,
 	
 	
-		/**
+		/*
 		 * You can control the default ordering direction, and even alter the
 		 * behaviour of the sort handler (i.e. only allow ascending ordering etc)
 		 * using this parameter.
@@ -12112,7 +12112,7 @@
 		"asSorting": [ 'asc', 'desc' ],
 	
 	
-		/**
+		/*
 		 * Enable or disable filtering on the data in this column.
 		 *  @type boolean
 		 *  @default true
@@ -12145,7 +12145,7 @@
 		"bSearchable": true,
 	
 	
-		/**
+		/*
 		 * Enable or disable ordering on this column.
 		 *  @type boolean
 		 *  @default true
@@ -12178,7 +12178,7 @@
 		"bSortable": true,
 	
 	
-		/**
+		/*
 		 * Enable or disable the display of this column.
 		 *  @type boolean
 		 *  @default true
@@ -12211,7 +12211,7 @@
 		"bVisible": true,
 	
 	
-		/**
+		/*
 		 * Developer definable function that is called whenever a cell is created (Ajax source,
 		 * etc) or processed for input (DOM source). This can be used as a compliment to mRender
 		 * allowing you to modify the DOM element (add background colour for example) when the
@@ -12243,7 +12243,7 @@
 		"fnCreatedCell": null,
 	
 	
-		/**
+		/*
 		 * This parameter has been replaced by `data` in DataTables to ensure naming
 		 * consistency. `dataProp` can still be used, as there is backwards
 		 * compatibility in DataTables for this option, but it is strongly
@@ -12252,7 +12252,7 @@
 		 */
 	
 	
-		/**
+		/*
 		 * This property can be used to read data from any data source property,
 		 * including deeply nested objects / properties. `data` can be given in a
 		 * number of different ways which effect its behaviour:
@@ -12424,7 +12424,7 @@
 		"mData": null,
 	
 	
-		/**
+		/*
 		 * This property is the rendering partner to `data` and it is suggested that
 		 * when you want to manipulate data for display (including filtering,
 		 * sorting etc) without altering the underlying data for the table, use this
@@ -12546,7 +12546,7 @@
 		"mRender": null,
 	
 	
-		/**
+		/*
 		 * Change the cell type created for the column - either TD cells or TH cells. This
 		 * can be useful as TH cells have semantic meaning in the table body, allowing them
 		 * to act as a header for a row (you may wish to add scope='row' to the TH elements).
@@ -12570,7 +12570,7 @@
 		"sCellType": "td",
 	
 	
-		/**
+		/*
 		 * Class to give to each cell in this column.
 		 *  @type string
 		 *  @default <i>Empty string</i>
@@ -12604,7 +12604,7 @@
 		 */
 		"sClass": "",
 	
-		/**
+		/*
 		 * When DataTables calculates the column widths to assign to each column,
 		 * it finds the longest string in each column and then constructs a
 		 * temporary table and reads the widths from that. The problem with this
@@ -12638,7 +12638,7 @@
 		"sContentPadding": "",
 	
 	
-		/**
+		/*
 		 * Allows a default value to be given for a column's data, and will be used
 		 * whenever a null data source is encountered (this can be because `data`
 		 * is set to null, or because the data source itself is null).
@@ -12681,7 +12681,7 @@
 		"sDefaultContent": null,
 	
 	
-		/**
+		/*
 		 * This parameter is only used in DataTables' server-side processing. It can
 		 * be exceptionally useful to know what columns are being displayed on the
 		 * client side, and to map these to database fields. When defined, the names
@@ -12725,7 +12725,7 @@
 		"sName": "",
 	
 	
-		/**
+		/*
 		 * Defines a data source type for the ordering which can be used to read
 		 * real-time information from the table (updating the internally cached
 		 * version) prior to ordering. This allows ordering to occur on user
@@ -12767,7 +12767,7 @@
 		"sSortDataType": "std",
 	
 	
-		/**
+		/*
 		 * The title of this column.
 		 *  @type string
 		 *  @default null <i>Derived from the 'TH' value for this column in the
@@ -12803,7 +12803,7 @@
 		"sTitle": null,
 	
 	
-		/**
+		/*
 		 * The type allows you to specify how the data for this column will be
 		 * ordered. Four types (string, numeric, date and html (which will strip
 		 * HTML tags before ordering)) are currently available. Note that only date
@@ -12844,7 +12844,7 @@
 		"sType": null,
 	
 	
-		/**
+		/*
 		 * Defining the width of the column, this parameter may take any CSS value
 		 * (3em, 20px etc). DataTables applies 'smart' widths to columns which have not
 		 * been given a specific width through this interface ensuring that the table
@@ -12886,7 +12886,7 @@
 	
 	
 	
-	/**
+	/*
 	 * DataTables settings object - this holds all the information needed for a
 	 * given table, including configuration, data and current application of the
 	 * table options. DataTables does not have a single instance for each DataTable
@@ -12909,13 +12909,13 @@
 	 *    will be done in 2.0.
 	 */
 	DataTable.models.oSettings = {
-		/**
+		/*
 		 * Primary features of DataTables and their enablement state.
 		 *  @namespace
 		 */
 		"oFeatures": {
 	
-			/**
+			/*
 			 * Flag to say if DataTables should automatically try to calculate the
 			 * optimum table and columns widths (true) or not (false).
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -12924,7 +12924,7 @@
 			 */
 			"bAutoWidth": null,
 	
-			/**
+			/*
 			 * Delay the creation of TR and TD elements until they are actually
 			 * needed by a driven page draw. This can give a significant speed
 			 * increase for Ajax source and Javascript source data, but makes no
@@ -12935,7 +12935,7 @@
 			 */
 			"bDeferRender": null,
 	
-			/**
+			/*
 			 * Enable filtering on the table or not. Note that if this is disabled
 			 * then there is no filtering at all on the table, including fnFilter.
 			 * To just remove the filtering input use sDom and remove the 'f' option.
@@ -12945,7 +12945,7 @@
 			 */
 			"bFilter": null,
 	
-			/**
+			/*
 			 * Table information element (the 'Showing x of y records' div) enable
 			 * flag.
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -12954,7 +12954,7 @@
 			 */
 			"bInfo": null,
 	
-			/**
+			/*
 			 * Present a user control allowing the end user to change the page size
 			 * when pagination is enabled.
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -12963,7 +12963,7 @@
 			 */
 			"bLengthChange": null,
 	
-			/**
+			/*
 			 * Pagination enabled or not. Note that if this is disabled then length
 			 * changing must also be disabled.
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -12972,7 +12972,7 @@
 			 */
 			"bPaginate": null,
 	
-			/**
+			/*
 			 * Processing indicator enable flag whenever DataTables is enacting a
 			 * user request - typically an Ajax request for server-side processing.
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -12981,7 +12981,7 @@
 			 */
 			"bProcessing": null,
 	
-			/**
+			/*
 			 * Server-side processing enabled flag - when enabled DataTables will
 			 * get all data from the server for every draw - there is no filtering,
 			 * sorting or paging done on the client-side.
@@ -12991,7 +12991,7 @@
 			 */
 			"bServerSide": null,
 	
-			/**
+			/*
 			 * Sorting enablement flag.
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
@@ -12999,7 +12999,7 @@
 			 */
 			"bSort": null,
 	
-			/**
+			/*
 			 * Multi-column sorting
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
@@ -13007,7 +13007,7 @@
 			 */
 			"bSortMulti": null,
 	
-			/**
+			/*
 			 * Apply a class to the columns which are being sorted to provide a
 			 * visual highlight or not. This can slow things down when enabled since
 			 * there is a lot of DOM interaction.
@@ -13017,7 +13017,7 @@
 			 */
 			"bSortClasses": null,
 	
-			/**
+			/*
 			 * State saving enablement flag.
 			 * Note that this parameter will be set by the initialisation routine. To
 			 * set a default use {@link DataTable.defaults}.
@@ -13027,12 +13027,12 @@
 		},
 	
 	
-		/**
+		/*
 		 * Scrolling settings for a table.
 		 *  @namespace
 		 */
 		"oScroll": {
-			/**
+			/*
 			 * When the table is shorter in height than sScrollY, collapse the
 			 * table container down to the height of the table (when true).
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -13041,7 +13041,7 @@
 			 */
 			"bCollapse": null,
 	
-			/**
+			/*
 			 * Width of the scrollbar for the web-browser's platform. Calculated
 			 * during table initialisation.
 			 *  @type int
@@ -13049,7 +13049,7 @@
 			 */
 			"iBarWidth": 0,
 	
-			/**
+			/*
 			 * Viewport width for horizontal scrolling. Horizontal scrolling is
 			 * disabled if an empty string.
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -13058,7 +13058,7 @@
 			 */
 			"sX": null,
 	
-			/**
+			/*
 			 * Width to expand the table to when using x-scrolling. Typically you
 			 * should not need to use this.
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -13068,7 +13068,7 @@
 			 */
 			"sXInner": null,
 	
-			/**
+			/*
 			 * Viewport height for vertical scrolling. Vertical scrolling is disabled
 			 * if an empty string.
 			 * Note that this parameter will be set by the initialisation routine. To
@@ -13078,13 +13078,13 @@
 			"sY": null
 		},
 	
-		/**
+		/*
 		 * Language information for the table.
 		 *  @namespace
 		 *  @extends DataTable.defaults.oLanguage
 		 */
 		"oLanguage": {
-			/**
+			/*
 			 * Information callback function. See
 			 * {@link DataTable.defaults.fnInfoCallback}
 			 *  @type function
@@ -13093,12 +13093,12 @@
 			"fnInfoCallback": null
 		},
 	
-		/**
+		/*
 		 * Browser support parameters
 		 *  @namespace
 		 */
 		"oBrowser": {
-			/**
+			/*
 			 * Indicate if the browser incorrectly calculates width:100% inside a
 			 * scrolling element (IE6/7)
 			 *  @type boolean
@@ -13106,7 +13106,7 @@
 			 */
 			"bScrollOversize": false,
 	
-			/**
+			/*
 			 * Determine if the vertical scrollbar is on the right or left of the
 			 * scrolling container - needed for rtl language layout, although not
 			 * all browsers move the scrollbar (Safari).
@@ -13115,14 +13115,14 @@
 			 */
 			"bScrollbarLeft": false,
 	
-			/**
+			/*
 			 * Flag for if `getBoundingClientRect` is fully supported or not
 			 *  @type boolean
 			 *  @default false
 			 */
 			"bBounding": false,
 	
-			/**
+			/*
 			 * Browser scrollbar width
 			 *  @type integer
 			 *  @default 0
@@ -13134,7 +13134,7 @@
 		"ajax": null,
 	
 	
-		/**
+		/*
 		 * Array referencing the nodes which are used for the features. The
 		 * parameters of this object match what is allowed by sDom - i.e.
 		 *   <ul>
@@ -13150,7 +13150,7 @@
 		 */
 		"aanFeatures": [],
 	
-		/**
+		/*
 		 * Store data information - see {@link DataTable.models.oRow} for detailed
 		 * information.
 		 *  @type array
@@ -13158,49 +13158,49 @@
 		 */
 		"aoData": [],
 	
-		/**
+		/*
 		 * Array of indexes which are in the current display (after filtering etc)
 		 *  @type array
 		 *  @default []
 		 */
 		"aiDisplay": [],
 	
-		/**
+		/*
 		 * Array of indexes for display - no filtering
 		 *  @type array
 		 *  @default []
 		 */
 		"aiDisplayMaster": [],
 	
-		/**
+		/*
 		 * Map of row ids to data indexes
 		 *  @type object
 		 *  @default {}
 		 */
 		"aIds": {},
 	
-		/**
+		/*
 		 * Store information about each column that is in use
 		 *  @type array
 		 *  @default []
 		 */
 		"aoColumns": [],
 	
-		/**
+		/*
 		 * Store information about the table's header
 		 *  @type array
 		 *  @default []
 		 */
 		"aoHeader": [],
 	
-		/**
+		/*
 		 * Store information about the table's footer
 		 *  @type array
 		 *  @default []
 		 */
 		"aoFooter": [],
 	
-		/**
+		/*
 		 * Store the applied global search information in case we want to force a
 		 * research or compare the old search to a new one.
 		 * Note that this parameter will be set by the initialisation routine. To
@@ -13210,7 +13210,7 @@
 		 */
 		"oPreviousSearch": {},
 	
-		/**
+		/*
 		 * Store the applied search for each column - see
 		 * {@link DataTable.models.oSearch} for the format that is used for the
 		 * filtering information for each column.
@@ -13219,7 +13219,7 @@
 		 */
 		"aoPreSearchCols": [],
 	
-		/**
+		/*
 		 * Sorting that is applied to the table. Note that the inner arrays are
 		 * used in the following manner:
 		 * <ul>
@@ -13233,7 +13233,7 @@
 		 */
 		"aaSorting": null,
 	
-		/**
+		/*
 		 * Sorting that is always applied to the table (i.e. prefixed in front of
 		 * aaSorting).
 		 * Note that this parameter will be set by the initialisation routine. To
@@ -13243,7 +13243,7 @@
 		 */
 		"aaSortingFixed": [],
 	
-		/**
+		/*
 		 * Classes to use for the striping of a table.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -13252,56 +13252,56 @@
 		 */
 		"asStripeClasses": null,
 	
-		/**
+		/*
 		 * If restoring a table - we should restore its striping classes as well
 		 *  @type array
 		 *  @default []
 		 */
 		"asDestroyStripes": [],
 	
-		/**
+		/*
 		 * If restoring a table - we should restore its width
 		 *  @type int
 		 *  @default 0
 		 */
 		"sDestroyWidth": 0,
 	
-		/**
+		/*
 		 * Callback functions array for every time a row is inserted (i.e. on a draw).
 		 *  @type array
 		 *  @default []
 		 */
 		"aoRowCallback": [],
 	
-		/**
+		/*
 		 * Callback functions for the header on each draw.
 		 *  @type array
 		 *  @default []
 		 */
 		"aoHeaderCallback": [],
 	
-		/**
+		/*
 		 * Callback function for the footer on each draw.
 		 *  @type array
 		 *  @default []
 		 */
 		"aoFooterCallback": [],
 	
-		/**
+		/*
 		 * Array of callback functions for draw callback functions
 		 *  @type array
 		 *  @default []
 		 */
 		"aoDrawCallback": [],
 	
-		/**
+		/*
 		 * Array of callback functions for row created function
 		 *  @type array
 		 *  @default []
 		 */
 		"aoRowCreatedCallback": [],
 	
-		/**
+		/*
 		 * Callback functions for just before the table is redrawn. A return of
 		 * false will be used to cancel the draw.
 		 *  @type array
@@ -13309,7 +13309,7 @@
 		 */
 		"aoPreDrawCallback": [],
 	
-		/**
+		/*
 		 * Callback functions for when the table has been initialised.
 		 *  @type array
 		 *  @default []
@@ -13317,7 +13317,7 @@
 		"aoInitComplete": [],
 	
 	
-		/**
+		/*
 		 * Callbacks for modifying the settings to be stored for state saving, prior to
 		 * saving state.
 		 *  @type array
@@ -13325,7 +13325,7 @@
 		 */
 		"aoStateSaveParams": [],
 	
-		/**
+		/*
 		 * Callbacks for modifying the settings that have been stored for state saving
 		 * prior to using the stored values to restore the state.
 		 *  @type array
@@ -13333,7 +13333,7 @@
 		 */
 		"aoStateLoadParams": [],
 	
-		/**
+		/*
 		 * Callbacks for operating on the settings object once the saved state has been
 		 * loaded
 		 *  @type array
@@ -13341,49 +13341,49 @@
 		 */
 		"aoStateLoaded": [],
 	
-		/**
+		/*
 		 * Cache the table ID for quick access
 		 *  @type string
 		 *  @default <i>Empty string</i>
 		 */
 		"sTableId": "",
 	
-		/**
+		/*
 		 * The TABLE node for the main table
 		 *  @type node
 		 *  @default null
 		 */
 		"nTable": null,
 	
-		/**
+		/*
 		 * Permanent ref to the thead element
 		 *  @type node
 		 *  @default null
 		 */
 		"nTHead": null,
 	
-		/**
+		/*
 		 * Permanent ref to the tfoot element - if it exists
 		 *  @type node
 		 *  @default null
 		 */
 		"nTFoot": null,
 	
-		/**
+		/*
 		 * Permanent ref to the tbody element
 		 *  @type node
 		 *  @default null
 		 */
 		"nTBody": null,
 	
-		/**
+		/*
 		 * Cache the wrapper node (contains all DataTables controlled elements)
 		 *  @type node
 		 *  @default null
 		 */
 		"nTableWrapper": null,
 	
-		/**
+		/*
 		 * Indicate if when using server-side processing the loading of data
 		 * should be deferred until the second draw.
 		 * Note that this parameter will be set by the initialisation routine. To
@@ -13393,14 +13393,14 @@
 		 */
 		"bDeferLoading": false,
 	
-		/**
+		/*
 		 * Indicate if all required information has been read in
 		 *  @type boolean
 		 *  @default false
 		 */
 		"bInitialised": false,
 	
-		/**
+		/*
 		 * Information about open rows. Each object in the array has the parameters
 		 * 'nTr' and 'nParent'
 		 *  @type array
@@ -13408,7 +13408,7 @@
 		 */
 		"aoOpenRows": [],
 	
-		/**
+		/*
 		 * Dictate the positioning of DataTables' control elements - see
 		 * {@link DataTable.model.oInit.sDom}.
 		 * Note that this parameter will be set by the initialisation routine. To
@@ -13418,14 +13418,14 @@
 		 */
 		"sDom": null,
 	
-		/**
+		/*
 		 * Search delay (in mS)
 		 *  @type integer
 		 *  @default null
 		 */
 		"searchDelay": null,
 	
-		/**
+		/*
 		 * Which type of pagination should be used.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -13434,7 +13434,7 @@
 		 */
 		"sPaginationType": "two_button",
 	
-		/**
+		/*
 		 * The state duration (for `stateSave`) in seconds.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -13443,7 +13443,7 @@
 		 */
 		"iStateDuration": 0,
 	
-		/**
+		/*
 		 * Array of callback functions for state saving. Each array element is an
 		 * object with the following parameters:
 		 *   <ul>
@@ -13458,7 +13458,7 @@
 		 */
 		"aoStateSave": [],
 	
-		/**
+		/*
 		 * Array of callback functions for state loading. Each array element is an
 		 * object with the following parameters:
 		 *   <ul>
@@ -13471,21 +13471,21 @@
 		 */
 		"aoStateLoad": [],
 	
-		/**
+		/*
 		 * State that was saved. Useful for back reference
 		 *  @type object
 		 *  @default null
 		 */
 		"oSavedState": null,
 	
-		/**
+		/*
 		 * State that was loaded. Useful for back reference
 		 *  @type object
 		 *  @default null
 		 */
 		"oLoadedState": null,
 	
-		/**
+		/*
 		 * Source url for AJAX data for the table.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -13494,7 +13494,7 @@
 		 */
 		"sAjaxSource": null,
 	
-		/**
+		/*
 		 * Property from a given object from which to read the table data from. This
 		 * can be an empty string (when not server-side processing), in which case
 		 * it is  assumed an an array is given directly.
@@ -13504,14 +13504,14 @@
 		 */
 		"sAjaxDataProp": null,
 	
-		/**
+		/*
 		 * Note if draw should be blocked while getting data
 		 *  @type boolean
 		 *  @default true
 		 */
 		"bAjaxDataGet": true,
 	
-		/**
+		/*
 		 * The last jQuery XHR object that was used for server-side data gathering.
 		 * This can be used for working with the XHR information in one of the
 		 * callbacks
@@ -13520,21 +13520,21 @@
 		 */
 		"jqXHR": null,
 	
-		/**
+		/*
 		 * JSON returned from the server in the last Ajax request
 		 *  @type object
 		 *  @default undefined
 		 */
 		"json": undefined,
 	
-		/**
+		/*
 		 * Data submitted as part of the last Ajax request
 		 *  @type object
 		 *  @default undefined
 		 */
 		"oAjaxData": undefined,
 	
-		/**
+		/*
 		 * Function to get the server-side data.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -13542,7 +13542,7 @@
 		 */
 		"fnServerData": null,
 	
-		/**
+		/*
 		 * Functions which are called prior to sending an Ajax request so extra
 		 * parameters can easily be sent to the server
 		 *  @type array
@@ -13550,7 +13550,7 @@
 		 */
 		"aoServerParams": [],
 	
-		/**
+		/*
 		 * Send the XHR HTTP method - GET or POST (could be PUT or DELETE if
 		 * required).
 		 * Note that this parameter will be set by the initialisation routine. To
@@ -13559,7 +13559,7 @@
 		 */
 		"sServerMethod": null,
 	
-		/**
+		/*
 		 * Format numbers for display.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -13567,7 +13567,7 @@
 		 */
 		"fnFormatNumber": null,
 	
-		/**
+		/*
 		 * List of options that can be used for the user selectable length menu.
 		 * Note that this parameter will be set by the initialisation routine. To
 		 * set a default use {@link DataTable.defaults}.
@@ -13576,7 +13576,7 @@
 		 */
 		"aLengthMenu": null,
 	
-		/**
+		/*
 		 * Counter for the draws that the table does. Also used as a tracker for
 		 * server-side processing
 		 *  @type int
@@ -13584,35 +13584,35 @@
 		 */
 		"iDraw": 0,
 	
-		/**
+		/*
 		 * Indicate if a redraw is being done - useful for Ajax
 		 *  @type boolean
 		 *  @default false
 		 */
 		"bDrawing": false,
 	
-		/**
+		/*
 		 * Draw index (iDraw) of the last error when parsing the returned data
 		 *  @type int
 		 *  @default -1
 		 */
 		"iDrawError": -1,
 	
-		/**
+		/*
 		 * Paging display length
 		 *  @type int
 		 *  @default 10
 		 */
 		"_iDisplayLength": 10,
 	
-		/**
+		/*
 		 * Paging start point - aiDisplay index
 		 *  @type int
 		 *  @default 0
 		 */
 		"_iDisplayStart": 0,
 	
-		/**
+		/*
 		 * Server-side processing - number of records in the result set
 		 * (i.e. before filtering), Use fnRecordsTotal rather than
 		 * this property to get the value of the number of records, regardless of
@@ -13623,7 +13623,7 @@
 		 */
 		"_iRecordsTotal": 0,
 	
-		/**
+		/*
 		 * Server-side processing - number of records in the current display set
 		 * (i.e. after filtering). Use fnRecordsDisplay rather than
 		 * this property to get the value of the number of records, regardless of
@@ -13634,14 +13634,14 @@
 		 */
 		"_iRecordsDisplay": 0,
 	
-		/**
+		/*
 		 * The classes to use for the table
 		 *  @type object
 		 *  @default {}
 		 */
 		"oClasses": {},
 	
-		/**
+		/*
 		 * Flag attached to the settings object so you can check in the draw
 		 * callback if filtering has been done in the draw. Deprecated in favour of
 		 * events.
@@ -13651,7 +13651,7 @@
 		 */
 		"bFiltered": false,
 	
-		/**
+		/*
 		 * Flag attached to the settings object so you can check in the draw
 		 * callback if sorting has been done in the draw. Deprecated in favour of
 		 * events.
@@ -13661,7 +13661,7 @@
 		 */
 		"bSorted": false,
 	
-		/**
+		/*
 		 * Indicate that if multiple rows are in the header and there is more than
 		 * one unique cell per column, if the top one (true) or bottom one (false)
 		 * should be used for sorting / title by DataTables.
@@ -13671,14 +13671,14 @@
 		 */
 		"bSortCellsTop": null,
 	
-		/**
+		/*
 		 * Initialisation object that is used for the table
 		 *  @type object
 		 *  @default null
 		 */
 		"oInit": null,
 	
-		/**
+		/*
 		 * Destroy callback functions - for plug-ins to attach themselves to the
 		 * destroy so they can clean up markup and events.
 		 *  @type array
@@ -13687,7 +13687,7 @@
 		"aoDestroyCallback": [],
 	
 	
-		/**
+		/*
 		 * Get the number of records in the current record set, before filtering
 		 *  @type function
 		 */
@@ -13698,7 +13698,7 @@
 				this.aiDisplayMaster.length;
 		},
 	
-		/**
+		/*
 		 * Get the number of records in the current record set, after filtering
 		 *  @type function
 		 */
@@ -13709,7 +13709,7 @@
 				this.aiDisplay.length;
 		},
 	
-		/**
+		/*
 		 * Get the display end point - aiDisplay index
 		 *  @type function
 		 */
@@ -13735,14 +13735,14 @@
 			}
 		},
 	
-		/**
+		/*
 		 * The DataTables object for this table
 		 *  @type object
 		 *  @default null
 		 */
 		"oInstance": null,
 	
-		/**
+		/*
 		 * Unique identifier for each instance of the DataTables object. If there
 		 * is an ID on the table node, then it takes that value, otherwise an
 		 * incrementing internal counter is used.
@@ -13751,44 +13751,44 @@
 		 */
 		"sInstance": null,
 	
-		/**
+		/*
 		 * tabindex attribute value that is added to DataTables control elements, allowing
 		 * keyboard navigation of the table and its controls.
 		 */
 		"iTabIndex": 0,
 	
-		/**
+		/*
 		 * DIV container for the footer scrolling table if scrolling
 		 */
 		"nScrollHead": null,
 	
-		/**
+		/*
 		 * DIV container for the footer scrolling table if scrolling
 		 */
 		"nScrollFoot": null,
 	
-		/**
+		/*
 		 * Last applied sort
 		 *  @type array
 		 *  @default []
 		 */
 		"aLastSort": [],
 	
-		/**
+		/*
 		 * Stored plug-in instances
 		 *  @type object
 		 *  @default {}
 		 */
 		"oPlugins": {},
 	
-		/**
+		/*
 		 * Function used to get a row's id from the row's data
 		 *  @type function
 		 *  @default null
 		 */
 		"rowIdFn": null,
 	
-		/**
+		/*
 		 * Data location where to store a row's id
 		 *  @type string
 		 *  @default null
@@ -13796,7 +13796,7 @@
 		"rowId": null
 	};
 
-	/**
+	/*
 	 * Extension object for DataTables that is used to provide all extension
 	 * options.
 	 *
@@ -13808,7 +13808,7 @@
 	 */
 	
 	
-	/**
+	/*
 	 * DataTables extensions
 	 * 
 	 * This namespace acts as a collection area for plug-ins that can be used to
@@ -13822,7 +13822,7 @@
 	 *  @namespace
 	 */
 	DataTable.ext = _ext = {
-		/**
+		/*
 		 * Buttons. For use with the Buttons extension for DataTables. This is
 		 * defined here so other extensions can define buttons regardless of load
 		 * order. It is _not_ used by DataTables core.
@@ -13833,7 +13833,7 @@
 		buttons: {},
 	
 	
-		/**
+		/*
 		 * Element class names
 		 *
 		 *  @type object
@@ -13842,7 +13842,7 @@
 		classes: {},
 	
 	
-		/**
+		/*
 		 * DataTables build type (expanded by the download builder)
 		 *
 		 *  @type string
@@ -13850,7 +13850,7 @@
 		build:"dt/dt-1.10.16",
 	
 	
-		/**
+		/*
 		 * Error reporting.
 		 * 
 		 * How should DataTables report an error. Can take the value 'alert',
@@ -13862,7 +13862,7 @@
 		errMode: "alert",
 	
 	
-		/**
+		/*
 		 * Feature plug-ins.
 		 * 
 		 * This is an array of objects which describe the feature plug-ins that are
@@ -13902,7 +13902,7 @@
 		feature: [],
 	
 	
-		/**
+		/*
 		 * Row searching.
 		 * 
 		 * This method of searching is complimentary to the default type based
@@ -13963,7 +13963,7 @@
 		search: [],
 	
 	
-		/**
+		/*
 		 * Selector extensions
 		 *
 		 * The `selector` option can be used to extend the options available for the
@@ -13994,7 +13994,7 @@
 		},
 	
 	
-		/**
+		/*
 		 * Internal functions, exposed for used in plug-ins.
 		 * 
 		 * Please note that you should not need to use the internal methods for
@@ -14007,14 +14007,14 @@
 		internal: {},
 	
 	
-		/**
+		/*
 		 * Legacy configuration options. Enable and disable legacy options that
 		 * are available in DataTables.
 		 *
 		 *  @type object
 		 */
 		legacy: {
-			/**
+			/*
 			 * Enable / disable DataTables 1.9 compatible server-side processing
 			 * requests
 			 *
@@ -14025,7 +14025,7 @@
 		},
 	
 	
-		/**
+		/*
 		 * Pagination plug-in methods.
 		 * 
 		 * Each entry in this object is a function and defines which buttons should
@@ -14079,7 +14079,7 @@
 		},
 	
 	
-		/**
+		/*
 		 * Ordering plug-ins - custom data source
 		 * 
 		 * The extension options for ordering of data available here is complimentary
@@ -14122,7 +14122,7 @@
 		order: {},
 	
 	
-		/**
+		/*
 		 * Type based plug-ins.
 		 *
 		 * Each column in DataTables has a type assigned to it, either by automatic
@@ -14133,7 +14133,7 @@
 		 * @namespace
 		 */
 		type: {
-			/**
+			/*
 			 * Type detection functions.
 			 *
 			 * The functions defined in this object are used to automatically detect
@@ -14176,7 +14176,7 @@
 			detect: [],
 	
 	
-			/**
+			/*
 			 * Type based search formatting.
 			 *
 			 * The type based searching functions can be used to pre-format the
@@ -14215,7 +14215,7 @@
 			search: {},
 	
 	
-			/**
+			/*
 			 * Type based ordering.
 			 *
 			 * The column type tells DataTables what ordering to apply to the table
@@ -14282,7 +14282,7 @@
 			order: {}
 		},
 	
-		/**
+		/*
 		 * Unique DataTables instance counter
 		 *
 		 * @type int
@@ -14298,7 +14298,7 @@
 		// version
 		//
 	
-		/**
+		/*
 		 * Version check function.
 		 *  @type function
 		 *  @depreciated Since 1.10
@@ -14306,7 +14306,7 @@
 		fnVersionCheck: DataTable.fnVersionCheck,
 	
 	
-		/**
+		/*
 		 * Index for what 'this' index API functions should use
 		 *  @type int
 		 *  @deprecated Since v1.10
@@ -14314,7 +14314,7 @@
 		iApiIndex: 0,
 	
 	
-		/**
+		/*
 		 * jQuery UI class container
 		 *  @type object
 		 *  @deprecated Since v1.10
@@ -14322,7 +14322,7 @@
 		oJUIClasses: {},
 	
 	
-		/**
+		/*
 		 * Software version
 		 *  @type string
 		 *  @deprecated Since v1.10
@@ -14871,7 +14871,7 @@
 			d;
 	};
 	
-	/**
+	/*
 	 * Helpers for `columns.render`.
 	 *
 	 * The options defined here can be used with the `columns.render` initialisation
@@ -14947,7 +14947,7 @@
 	 */
 	
 	
-	/**
+	/*
 	 * Create a wrapper function for exporting an internal functions to an external API.
 	 *  @param {string} fn API function name
 	 *  @returns {function} wrapped function
@@ -14964,7 +14964,7 @@
 	}
 	
 	
-	/**
+	/*
 	 * Reference to internal functions for use by plug-in developers. Note that
 	 * these methods are references to internal functions and are considered to be
 	 * private. If you use these methods, be aware that they are liable to change
@@ -15090,7 +15090,7 @@
 
 
 	// Information about events fired by DataTables - for documentation.
-	/**
+	/*
 	 * Draw event, fired whenever the table is redrawn on the page, at the same
 	 * point as fnDrawCallback. This may be useful for binding events or
 	 * performing calculations when the table is altered at all.
@@ -15100,7 +15100,7 @@
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}
 	 */
 
-	/**
+	/*
 	 * Search event, fired when the searching applied to the table (using the
 	 * built-in global search, or column filters) is altered.
 	 *  @name DataTable#search.dt
@@ -15109,7 +15109,7 @@
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}
 	 */
 
-	/**
+	/*
 	 * Page change event, fired when the paging of the table is altered.
 	 *  @name DataTable#page.dt
 	 *  @event
@@ -15117,7 +15117,7 @@
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}
 	 */
 
-	/**
+	/*
 	 * Order event, fired when the ordering applied to the table is altered.
 	 *  @name DataTable#order.dt
 	 *  @event
@@ -15125,7 +15125,7 @@
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}
 	 */
 
-	/**
+	/*
 	 * DataTables initialisation complete event, fired when the table is fully
 	 * drawn, including Ajax data loaded, if Ajax data is required.
 	 *  @name DataTable#init.dt
@@ -15136,7 +15136,7 @@
 	 *    present if client-side Ajax sourced data is used</li></ol>
 	 */
 
-	/**
+	/*
 	 * State save event, fired when the table has changed state a new state save
 	 * is required. This event allows modification of the state saving object
 	 * prior to actually doing the save, including addition or other state
@@ -15148,7 +15148,7 @@
 	 *  @param {object} json The state information to be saved
 	 */
 
-	/**
+	/*
 	 * State load event, fired when the table is loading state from the stored
 	 * data, but prior to the settings object being modified by the saved state
 	 * - allowing modification of the saved state is required or loading of
@@ -15160,7 +15160,7 @@
 	 *  @param {object} json The saved state information
 	 */
 
-	/**
+	/*
 	 * State loaded event, fired when state has been loaded from stored data and
 	 * the settings object has been modified by the loaded data.
 	 *  @name DataTable#stateLoaded.dt
@@ -15170,7 +15170,7 @@
 	 *  @param {object} json The saved state information
 	 */
 
-	/**
+	/*
 	 * Processing event, fired when DataTables is doing some kind of processing
 	 * (be it, order, searcg or anything else). It can be used to indicate to
 	 * the end user that there is something happening, or that something has
@@ -15182,7 +15182,7 @@
 	 *  @param {boolean} bShow Flag for if DataTables is doing processing or not
 	 */
 
-	/**
+	/*
 	 * Ajax (XHR) event, fired whenever an Ajax request is completed from a
 	 * request to made to the server for new data. This event is called before
 	 * DataTables processed the returned data, so it can also be used to pre-
@@ -15213,7 +15213,7 @@
 	 *     } );
 	 */
 
-	/**
+	/*
 	 * Destroy event, fired when the DataTable is destroyed by calling fnDestroy
 	 * or passing the bDestroy:true parameter in the initialisation object. This
 	 * can be used to remove bound events, added DOM nodes, etc.
@@ -15223,7 +15223,7 @@
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}
 	 */
 
-	/**
+	/*
 	 * Page length change event, fired when number of records to show on each
 	 * page (the length) is changed.
 	 *  @name DataTable#length.dt
@@ -15233,7 +15233,7 @@
 	 *  @param {integer} len New length
 	 */
 
-	/**
+	/*
 	 * Column sizing has changed.
 	 *  @name DataTable#column-sizing.dt
 	 *  @event
@@ -15241,7 +15241,7 @@
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}
 	 */
 
-	/**
+	/*
 	 * Column visibility has changed.
 	 *  @name DataTable#column-visibility.dt
 	 *  @event
